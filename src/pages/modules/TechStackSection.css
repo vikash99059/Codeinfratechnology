@@ -1,0 +1,97 @@
+/* ===== Section ===== */
+.tech-section {
+  padding: 5px 20px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ===== Container ===== */
+.tech-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== Header ===== */
+.tech-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tech-header p {
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+}
+
+/* ===== Grid ===== */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ===== Card ===== */
+.tech-card {
+  background: #ffffff;
+  padding: 28px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.tech-icon {
+  margin-bottom: 10px;
+}
+
+.tech-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.tech-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 992px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-header h2 {
+    font-size: 30px;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 576px) {
+  .tech-section {
+    padding: 60px 16px;
+    background-attachment: scroll;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .tech-header h2 {
+    font-size: 26px;
+  }
+
+  .tech-header p {
+    font-size: 14px;
+  }
+}

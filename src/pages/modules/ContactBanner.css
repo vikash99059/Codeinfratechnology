@@ -1,0 +1,94 @@
+/* ===== Section ===== */
+.contact-banner {
+  position: relative;
+  min-height: 420px;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #1c8c87;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ===== Overlay ===== */
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* ===== Content ===== */
+.contact-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  color: #fff;
+}
+
+.contact-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.contact-content h2 span {
+  color: #4da3ff;
+}
+
+.contact-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  color: #e5e5e5;
+}
+
+/* ===== Button ===== */
+.contact-btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  background: #4da3ff;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 992px) {
+  .contact-content h2 {
+    font-size: 32px;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 576px) {
+  .contact-banner {
+    min-height: 360px;
+    padding: 60px 16px;
+    background-attachment: scroll; /* mobile fix */
+  }
+
+  .contact-content h2 {
+    font-size: 26px;
+  }
+
+  .contact-content p {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    padding: 12px 26px;
+    font-size: 14px;
+  }
+}

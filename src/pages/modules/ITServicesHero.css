@@ -1,0 +1,179 @@
+.it-hero-bg {
+  background-image: url("../../assets/images/tecno.jpg"); /* change if needed */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* ===== DARK OVERLAY ===== */
+.it-hero-overlay {
+  /* background: rgba(10, 20, 40, 0.65); */
+  /* backdrop-filter: blur(2px); */
+}
+
+/* ===== MAIN WRAPPER ===== */
+.it-hero-wrapper {
+  width: 100%;
+  padding: 80px 20px;
+}
+
+.it-hero-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* ===== LEFT IMAGE ===== */
+.it-hero-left img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== RIGHT CONTENT ===== */
+.it-hero-right {
+  color: #fff;
+  position: relative;
+}
+
+/* dotted world feel */
+
+.world-dots {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 260px;
+  height: 260px;
+  background-image: radial-gradient(#d6d6d6 2px, transparent 2px);
+  background-size: 16px 16px;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+/* TITLE */
+
+.it-hero-title {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: white;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px !important;
+}
+
+.it-hero-title span {
+  border-bottom: 5px solid #2ec4b6;
+}
+
+/* DESC */
+
+.it-hero-desc {
+  color: white;
+  line-height: 1.7;
+  margin-bottom: 24px !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* BUTTONS */
+
+.it-hero-buttons {
+  display: flex;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.btn-read,
+.btn-contact {
+  padding: 10px 22px !important; /* 🔥 thoda small */
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  transition: 0.3s !important;
+  white-space: nowrap;
+}
+
+.btn-read {
+  background: linear-gradient(45deg, #5f3afc, #6a5cff) !important;
+  color: white !important;
+}
+
+.btn-contact {
+  background: #2ec4b6 !important;
+  color: white !important;
+}
+
+.btn-read:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(95, 58, 252, 0.3);
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(46, 196, 182, 0.35);
+}
+
+/* ================= 📱 TABLET ================= */
+
+@media (max-width: 992px) {
+  .it-hero-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .it-hero-left img {
+    height: 380px;
+  }
+
+  .it-hero-title {
+    font-size: 30px !important;
+  }
+}
+
+/* ================= 📱 MOBILE ================= */
+
+@media (max-width: 576px) {
+  .it-hero-wrapper {
+    padding: 40px 14px;
+    min-height: auto; /* 🔥 auto height mobile */
+  }
+
+  .it-hero-left img {
+    height: 240px;
+  }
+
+  .it-hero-title {
+    font-size: 24px !important;
+    line-height: 1.3;
+  }
+
+  .it-hero-desc {
+    font-size: 14px;
+  }
+
+  /* ✅ buttons ek row me */
+  .it-hero-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .btn-read,
+  .btn-contact {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+
+  /* dots chhota */
+  .world-dots {
+    width: 160px;
+    height: 160px;
+    top: -20px;
+  }
+}
+
+

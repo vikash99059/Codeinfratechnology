@@ -1,0 +1,190 @@
+/* ===== FULL WIDTH FIXED BACKGROUND ===== */
+.codeinfra-contact-section {
+  width: 100%;
+  min-height: 520px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10px 0;
+  position: relative;
+}
+
+/* mobile par fixed bug fix */
+@media (max-width: 992px) {
+  .codeinfra-contact-section {
+    background-attachment: scroll;
+  }
+}
+
+/* ===== OVERLAY ===== */
+.codeinfra-contact-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== WRAPPER ===== */
+.codeinfra-contact-wrapper {
+  width: 92%;
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* ===== MAP ===== */
+.codeinfra-contact-map-box {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  
+}
+
+.codeinfra-contact-map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===== INFO BOX ===== */
+.codeinfra-contact-info-box {
+  
+  padding: 40px;
+  height: 499px;
+  
+  border-left: 4px solid #178380;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.codeinfra-contact-info-box h3 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.codeinfra-contact-info-item {
+  margin-bottom: 18px;
+}
+
+.codeinfra-contact-info-item span {
+  font-size: 12px;
+  color: #178380;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.codeinfra-contact-info-item p {
+  margin: 4px 0 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* ===== FORM SECTION ===== */
+.codeinfra-contact-form-section {
+  width: 100%;
+  padding: 10px 0;
+  
+}
+
+.codeinfra-contact-form-container {
+  width: 92%;
+  max-width: 900px;
+  margin: auto;
+  
+  padding: 50px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #178380;
+}
+
+.codeinfra-contact-form-container h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* ===== FORM ===== */
+.codeinfra-contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.codeinfra-contact-form input,
+.codeinfra-contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  transition: 0.25s;
+}
+
+.codeinfra-contact-form input:focus,
+.codeinfra-contact-form textarea:focus {
+  border-color: #178380;
+  box-shadow: 0 0 0 2px rgba(23, 131, 128, 0.12);
+}
+
+/* ===== BUTTON ===== */
+.codeinfra-contact-form button {
+  width: 100%;
+  padding: 15px;
+  background: #178380;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.25s;
+}
+
+.codeinfra-contact-form button:hover {
+  background: #0f766e;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .codeinfra-contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .codeinfra-contact-map-box {
+    height: 320px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .codeinfra-contact-section,
+  .codeinfra-contact-form-section {
+    padding: 60px 0;
+  }
+
+  .codeinfra-contact-info-box {
+    padding: 28px;
+  }
+
+  .codeinfra-contact-form-container {
+    padding: 32px 20px;
+  }
+
+  .codeinfra-contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .codeinfra-contact-form-container h3 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,150 @@
+/* ===== FULL WIDTH BACKGROUND ===== */
+.hrps-wrapper {
+  width: 100%;
+  padding: 5px 20px;
+ 
+
+  background-image: url("../../assets/images/whitebackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===== CENTER CONTENT ===== */
+.hrps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== MAIN HEADING ===== */
+.hrps-main-heading {
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.hrps-main-heading h2 {
+  font-size: 38px;
+          font-weight: 700;
+           text-transform: lowercase;
+          color: #333;
+          margin-bottom: 10px;
+}
+
+.testimonial-title {
+          font-size: 32px;
+          font-weight: 700;
+          color: #333;
+          margin-bottom: 50px;
+        }
+
+        .testimonial-title span {
+          color: #2aa198;
+          border-bottom: 3px solid #2aa198;
+        }
+
+/* ===== SECTION ===== */
+.hrps-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  /* margin-bottom: 80px; */
+}
+
+.hrps-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===== CONTENT ===== */
+.hrps-content {
+  flex: 1;
+}
+
+.hrps-content h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-transform: lowercase;
+  color: #111;
+}
+
+.hrps-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+/* ===== LIST ===== */
+.hrps-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 18px;
+}
+
+.hrps-list li {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.hrps-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #860000;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.hrps-impact {
+  color: #111;
+  font-size: 14px;
+}
+
+/* ===== IMAGE ===== */
+.hrps-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hrps-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .hrps-section {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hrps-section.reverse {
+    flex-direction: column;
+  }
+
+  .hrps-main-heading h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hrps-wrapper {
+    padding: 60px 16px;
+    background-attachment: scroll;
+  }
+
+  .hrps-content h3 {
+    font-size: 22px;
+  }
+
+  .hrps-desc,
+  .hrps-list li {
+    font-size: 14px;
+  }
+}

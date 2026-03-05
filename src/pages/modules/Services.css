@@ -1,0 +1,140 @@
+/* wrapper */
+.itservices-wrapper {
+  width: 100%;
+  padding: 80px 20px;
+  margin-top: 30px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* light line graphic overlay */
+.itservices-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.itservices-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.itservices-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 60px;
+}
+
+.itservices-title span {
+  border-bottom: 4px solid #2ec4b6;
+}
+
+/* grid */
+.itservices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* card */
+.itservices-card {
+  background: #f4f4f4;
+  padding: 50px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.itservices-card:hover {
+  transform: translateY(-8px);
+}
+
+.itservices-icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.itservices-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.itservices-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* overlay */
+.itservices-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2d4a78, #15807c);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.itservices-card:hover .itservices-overlay {
+  transform: translateY(0);
+}
+
+.itservices-learn-btn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  border: none;
+  background: white;
+  color: #2ec4b6;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.itservices-learn-btn:hover {
+  background: #222;
+  color: white;
+}
+
+/* responsive */
+
+@media (max-width: 992px) {
+  .itservices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .itservices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .itservices-title {
+    font-size: 26px;
+  }
+
+  .itservices-card {
+    padding: 40px 20px;
+  }
+}

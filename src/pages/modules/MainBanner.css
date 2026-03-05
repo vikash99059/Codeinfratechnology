@@ -1,0 +1,382 @@
+/* ===== WRAPPER ===== */
+.hbs-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+
+  padding: 80px 20px 160px;
+  background: linear-gradient(135deg, #19365b, #15807c);
+  overflow: visible;
+}
+
+/* ===== CONTAINER ===== */
+.hbs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* ===== LEFT CONTENT ===== */
+.hbs-content {
+  flex: 1.2; /* Slightly more space for content */
+  min-width: 300px;
+  color: white;
+}
+
+.hbs-heading {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hbs-highlight {
+  color: #00e5ff;
+}
+
+.hbs-description {
+  margin: 25px 0 30px;
+  opacity: 0.9;
+  line-height: 1.6;
+  font-size: 18px;
+  max-width: 550px;
+}
+
+/* ===== BUTTONS ===== */
+.hbs-button-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hbs-btn-primary {
+  background: linear-gradient(135deg, #2d4a78, #15807c);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.hbs-btn-primary:hover {
+ background: linear-gradient(135deg, #2d4a78, #15807c);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+}
+
+.hbs-btn-secondary {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.hbs-btn-secondary:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== IMAGE ===== */
+.hbs-image-box {
+  flex: 0.9; /* Slightly less space for image */
+  min-width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hbs-image-box img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* Control maximum height */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* @keyframes floatAnimation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+} */
+
+/* ================================================= */
+/* 🔥 FLOATING HANGING BOX (MAIN MAGIC) */
+/* ================================================= */
+
+.hbs-floating-box {
+  position: absolute;
+  left: 50%;
+  bottom: -90px;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  padding: 35px;
+  /* background: rgba(255, 255, 255, 0.95); */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  color: #333;
+  z-index: 5;
+  border-radius: 20px;
+}
+
+.hbs-floating-box h3 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  color: white;
+  font-weight: 800;
+}
+
+/* ===== FORM ===== */
+.hbs-form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hbs-form-row input,
+.hbs-form-row select {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.hbs-form-row input:focus,
+.hbs-form-row select:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.1);
+}
+
+/* ===== BUTTON ===== */
+.hbs-appoint-btn {
+  margin: 25px auto 0;   /* left-right auto se center */
+  background: linear-gradient(135deg, #2d4a78, #15807c);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;        /* inline-block ki jagah */
+  transition: all 0.3s ease;
+}
+
+.hbs-appoint-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.4);
+}
+
+/* ================================================= */
+/* 📱 RESPONSIVE */
+/* ================================================= */
+
+/* Large laptops */
+@media (max-width: 1200px) {
+  .hbs-heading {
+    font-size: 42px;
+  }
+  
+  .hbs-floating-box {
+    width: 92%;
+    padding: 30px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hbs-container {
+    gap: 40px;
+  }
+  
+  .hbs-heading {
+    font-size: 38px;
+  }
+  
+  .hbs-description {
+    font-size: 17px;
+  }
+  
+  .hbs-image-box img {
+    max-height: 400px;
+  }
+  
+  .hbs-floating-box {
+    width: 94%;
+    bottom: -80px;
+    padding: 28px;
+  }
+}
+
+/* Small tablets and mobile */
+@media (max-width: 768px) {
+  .hbs-wrapper {
+    padding: 60px 20px 120px;
+  }
+  
+  .hbs-container {
+    flex-direction: column-reverse !important;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hbs-content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hbs-heading {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .hbs-description {
+    text-align: center;
+    margin: 20px auto 25px;
+  }
+
+  .hbs-button-group {
+    justify-content: center;
+  }
+
+  .hbs-image-box {
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .hbs-image-box img {
+    max-height: 300px;
+  }
+
+  .hbs-floating-box {
+    position: relative;
+    bottom: auto;
+    left:0px;
+    transform: none;
+    margin: 50px auto 0;
+    width: 95%;
+    padding: 25px;
+  }
+
+  .hbs-form-row {
+    flex-direction: column;
+  }
+
+  .hbs-form-row input,
+  .hbs-form-row select {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .hbs-appoint-btn {
+    width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .hbs-wrapper {
+    padding: 40px 15px 100px;
+  }
+  
+  .hbs-heading {
+    font-size: 30px;
+  }
+  
+  .hbs-description {
+    font-size: 16px;
+  }
+  
+  .hbs-btn-primary,
+  .hbs-btn-secondary {
+    padding: 12px 24px;
+    font-size: 15px;
+    width: 100%;
+  }
+  
+  .hbs-button-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .hbs-image-box {
+    max-width: 280px;
+  }
+  
+  .hbs-image-box img {
+    max-height: 250px;
+  }
+
+  .hbs-floating-box {
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .hbs-floating-box h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .hbs-form-row input,
+  .hbs-form-row select {
+    padding: 12px;
+  }
+
+  .hbs-appoint-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .hbs-heading {
+    font-size: 26px;
+  }
+  
+  .hbs-description {
+    font-size: 15px;
+  }
+  
+  .hbs-image-box {
+    max-width: 240px;
+  }
+  
+  .hbs-image-box img {
+    max-height: 200px;
+  }
+  
+  .hbs-floating-box {
+    padding: 18px;
+  }
+  
+  .hbs-floating-box h3 {
+    font-size: 22px;
+  }
+}
